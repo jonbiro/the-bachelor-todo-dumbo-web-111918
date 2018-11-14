@@ -1,3 +1,4 @@
+include "pry"
 def get_first_name_of_season_winner(data, season)
   data[season].each do |contestant|
     if contestant["status"] == "Winner"
@@ -42,7 +43,7 @@ def get_average_age_for_season(data, season)
   ages = 0
   data[season].each do |contestant|
     ages += contestant["age"].to_f
-    binding.pry 
+    binding.pry
   end
   return (ages/ data[season].length).round
 end
